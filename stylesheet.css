@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'MYoung HK';
+    src: url('MYoungHK-Xbold.woff') format('woff'),
+        url('MYoungHK-Xbold.ttf') format('truetype'),
+        url('MYoungHK-Xbold.svg#MYoungHK-Xbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

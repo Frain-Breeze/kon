@@ -1,1 +1,125 @@
-<h1>test</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+    font-family: 'MYoung HK';
+    src: url('MYoungHK-Xbold.woff') format('woff'),
+        url('MYoungHK-Xbold.ttf') format('truetype'),
+        url('MYoungHK-Xbold.svg#MYoungHK-Xbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+body  {
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.redbox {
+  border-radius: 25px;
+  border: 4px solid #ffffff;
+  background: #d22348;
+  padding-top: 1%; 
+  padding-left: 2%; 
+  padding-right: 2%; 
+  padding-bottom: 2%; 
+  margin-bottom: 1%;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 92%;
+  height: 100%;
+  vertical-align: middle;
+  color: #ffffff;
+  font-family: 'MYoung HK';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 150%;
+}
+</style>
+</head>
+<body>
+<div style="width:100%;overflow:hidden;">
+	<div id="title_div" style="float:left;width:50%">
+		<img src="title.png"; style="max-width:100%;position: relative;left: 50%;transform: translateX(-50%);">
+	</div>
+	<div style="float:right;width:50%;">
+		<p class="redbox" id="creditbox">Made by: Frain_Breeze, Wxnder and KingSizzle</p>
+    <p class="redbox" id="contactbox">Contact: <a href="https://twitter.com/Frain_Breez">@Frain_Breez</a>, <a href="https://twitter.com/KingS1zzle">@KingS1zzle</a>, <a href="https://discord.gg/EuyjFsCn5Y">Discord server</a> </p>
+    <p class="redbox" id="toolbox">Tools used: 010 editor, Godot, KDevelop, Visual Studio, Gimp, Photoshop, Krita, PPSSPP and Ghidra.</p>
+	</div>
+</div>
+
+<p class="redbox" id="creditbox_under" hidden="true"></p>
+<p class="redbox" id="contactbox_under" hidden="true"></p>
+<p class="redbox" id="toolbox_under" hidden="true"></p>
+<div class="redbox">
+  <h1>Download installer:</h1>
+  <p>Windows link1<br>Linux link2</p>
+</div>
+<div class="redbox">
+  <h1>Download xdelta:</h1>
+  <p>xdelta link</p>
+</div>
+<div class="redbox">
+  <h1>Installation instructions:</h1>
+  <p><h3>Xdelta instructions:</h3>
+    Xdelta patches are supported on a lot of platforms, with the drawback that you must install the whole patch. There is no way to only install part of it.<br>
+    <br>
+  </p>
+  <p><h3>Installer instructions:</h3>
+    The installer lets you choose which parts of the translation you want to use, and which parts should be left untouched.<br>
+    <a href="install_installer_windows.html">Install patch with the installer - Windows</a><br>
+    <a href="install_installer_linux.html">Install patch with the installer - Linux</a><br>
+  </p>
+</div>
+<div class="redbox">
+  <h1>Other project videos:</h1>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4bc0pycxbh0" title="YouTube video player" frameborder="0" allow="encrypted-media;picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="redbox">
+  <h1>Notes on untranslated items:</h1>
+  <p>Some parts of the game are unfortunately left untranslated, due to technical limitations with the way the translation works. Most notably, in the 'Album' menu under events, after a few events, the unlock descriptions turn into a garbled mess:</p>
+  <img src="events_untranslated.png" width="75%">
+  <p>Secondly, the 'Sing' menu has some untranslated menus and popups. However, the description box under these menus is still translated, so refer to that to see what the button does. Here's an example of these untranslated menus:</p>
+  <img src="sing_untranslated.png" width="75%">
+  <p>If you need to know what the text here says, refer to <a href="https://docs.google.com/spreadsheets/d/10NfFh5KqADPmA3LY9LmRQ4MuqNMCOl3xp6irpJmrpQQ/">KingSizzle's translation guide</a></p>
+  <p>Other than these two areas, everything else should be translated. If you find any areas that are still untranslated, or have any spelling or grammatical errors, feel free to send us a message (see the top of the page for contact information).</p>
+
+</div>
+
+<script>
+function swapbox(originalbox, newbox) {
+  if(document.getElementById(originalbox).innerHTML != "") { //if the text of the original box is empty, that probably means the new box is the element that spawns with the text
+    document.getElementById(newbox).innerHTML = document.getElementById(originalbox).innerHTML;
+  }
+  document.getElementById(originalbox).hidden = true;
+  document.getElementById(newbox).hidden = false;
+}
+
+
+
+function update_resize() {
+  //if the window is taller than it is wide, we want to put everything under one another
+  if((window.innerWidth/window.innerHeight) < 1) {
+    swapbox("creditbox", "creditbox_under");
+    swapbox("contactbox", "contactbox_under");
+    swapbox("toolbox", "toolbox_under");
+    document.getElementById("title_div").style.width = "100%";
+  }
+  else {
+    swapbox("creditbox_under", "creditbox");
+    swapbox("contactbox_under", "contactbox");
+    swapbox("toolbox_under", "toolbox");
+    document.getElementById("title_div").style.width = "50%";
+  }
+}
+
+window.onresize = update_resize;
+update_resize(); //trigger once on start
+
+</script>
+</body>
+</html>
