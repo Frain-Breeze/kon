@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+    font-family: 'MYoung HK';
+    src: url('../subset-MYoungHK-Xbold.woff2') format('woff2'),
+        url('../subset-MYoungHK-Xbold.woff') format('woff'),
+        url('../subset-MYoungHK-Xbold.ttf') format('truetype'),
+        url('../subset-MYoungHK-Xbold.svg#MYoungHK-Xbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+body  {
+  background-image: url("../background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.redbox {
+  border-radius: 25px;
+  border: 4px solid #ffffff;
+  background: #d22348;
+  padding-top: 1%; 
+  padding-left: 2%; 
+  padding-right: 2%; 
+  padding-bottom: 2%; 
+  margin-bottom: 1%;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 92%;
+  height: 100%;
+  vertical-align: middle;
+  color: #ffffff;
+  font-family: 'MYoung HK';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 150%;
+}
+</style>
+</head>
+<body>
+
+<div class="redbox">
+    <h1>Xdelta instructions for Linux:</h1>
+    <p>Video guide available here:<br>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5O1KrV7akXE" title="YouTube video player" frameborder="0" allow="encrypted-media;picture-in-picture; web-share" allowfullscreen></iframe><br>
+        <h2>Text Guide:</h2>
+        <p>First, download the .xdelta file for the game version you want to patch, either PSP or PS3. You can find a link to the patch on <a href="index.html">the main page</a>, under the "xdelta" section.</p>
+        <p>Then, if you haven't already, install xdelta using your package manager.</p>
+        <p>now run the command 'xdelta -d -s "original_file" "xdelta_file" "output_file"' where you replace the text between "" with paths to the corresponding files: original_file with the path to the japanese game .iso, xdelta_file with the path to the downloaded .xdelta file, and lastly replacing output_file with the location where you want to save the english patched .iso file.<br>
+        Here's an example of how that might look like:</p>
+        <img src="xdelta_linux_params.png" width="50%">
+        <p>Now, hit enter and wait. Once the program exits, you should find the output iso in the location you specified in the previous step.<br>
+        You can open this .iso in your PSP emulator.<br>
+        Keep in mind the PS3 version also has to be run in a PSP emulator.<br>
+        Of course, if you want to play on a real PSP, you will need to patch the PSP version.</p>
+      </p>
+</div>
+
+</body>
+</html>

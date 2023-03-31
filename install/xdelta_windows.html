@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@font-face {
+    font-family: 'MYoung HK';
+    src: url('../subset-MYoungHK-Xbold.woff2') format('woff2'),
+        url('../subset-MYoungHK-Xbold.woff') format('woff'),
+        url('../subset-MYoungHK-Xbold.ttf') format('truetype'),
+        url('../subset-MYoungHK-Xbold.svg#MYoungHK-Xbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+body  {
+  background-image: url("../background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.redbox {
+  border-radius: 25px;
+  border: 4px solid #ffffff;
+  background: #d22348;
+  padding-top: 1%; 
+  padding-left: 2%; 
+  padding-right: 2%; 
+  padding-bottom: 2%; 
+  margin-bottom: 1%;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 92%;
+  height: 100%;
+  vertical-align: middle;
+  color: #ffffff;
+  font-family: 'MYoung HK';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 150%;
+}
+</style>
+</head>
+<body>
+
+<div class="redbox">
+    <h1>Xdelta instructions for Windows:</h1>
+    <p>Video guide available here:<br>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7Pqhfl1qcsk" title="YouTube video player" frameborder="0" allow="encrypted-media;picture-in-picture; web-share" allowfullscreen></iframe><br>
+        <h2>Text Guide:</h2>
+        <p>First, download the .xdelta file for the game version you want to patch, either PSP or PS3. You can find a link to the patch on <a href="index.html">the main page</a>, under the "xdelta" section.</p>
+        <img src="xdelta_windows_download.png" width="50%">
+        <p>Then, download the "xdelta UI" patching utility from <a href="https://www.romhacking.net/utilities/598/">romhacking.net</a> and extract both xdelta.exe and xdeltaUI.exe.</p>
+        <p>Now open xdeltaUI.exe, you should see the following:</p>
+        <img src="xdelta_windows_xdeltaui.png" width="50%">
+        <p>Fill the first box with the original japanese .iso file,<br>
+        the second with the .xdelta file you downloaded,
+        and for the last one, you should put in the path to the file you want to save your english game as.</p>
+        <p>Hit patch, and wait. After a bit you should get a popup that says it's done, like so:</p>
+        <img src="xdelta_windows_finished.png" width="50%">
+        <p>Now you can open the output file in your PSP emulator.<br>
+        Keep in mind the PS3 version also has to be run in a PSP emulator.<br>
+        Of course, if you want to play on a real PSP, you will need to patch the PSP version.</p>
+      </p>
+</div>
+
+</body>
+</html>
