@@ -51,8 +51,8 @@ body  {
         <p>First, download the .xdelta file for the game version you want to patch, either PSP or PS3. You can find a link to the patch on <a href="index.html">the main page</a>, under the "xdelta" section.</p>
         <p>Then, if you haven't already, install xdelta using your package manager.</p>
         <p>now run the command 'xdelta -d -s "original_file" "xdelta_file" "output_file"' where you replace the text between "" with paths to the corresponding files: original_file with the path to the japanese game .iso, xdelta_file with the path to the downloaded .xdelta file, and lastly replacing output_file with the location where you want to save the english patched .iso file.<br>
-        Here's an example of how that might look like:</p>
-        <img src="xdelta_linux_params.png" width="50%">
+        Here's an example of how that might look like:<br>
+        xdelta -d -s ~/Desktop/game.iso ~/Desktop/psp_patch.xdelta ~/Desktop/output.iso</p>
         <p>Now, hit enter and wait. Once the program exits, you should find the output iso in the location you specified in the previous step.<br>
         You can open this .iso in your PSP emulator.<br>
         Keep in mind the PS3 version also has to be run in a PSP emulator.<br>
